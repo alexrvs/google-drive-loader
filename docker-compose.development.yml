@@ -33,7 +33,7 @@ services:
   server_app: &server_app
     build: .
     command: bundle exec rails server -b 0.0.0.0
-    entrypoint: "docker-entrypoint.sh"
+    entrypoint: "./docker-entrypoint.sh"
 
     volumes:
       - .:/home/www/googleloader
@@ -64,7 +64,7 @@ services:
 
   server_worker_app:
      <<: *server_app
-     command: bundler exec sidekiq -C config/sidekiq.yml
+     command: bundle exec sidekiq -C config/sidekiq.yml
      entrypoint: ''
      ports: []
      depends_on:
