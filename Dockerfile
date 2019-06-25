@@ -15,7 +15,7 @@ RUN useradd -m -d $APP_USER_HOME $APP_USER
 
 RUN mkdir /var/www && \
     chown -R $APP_USER:$APP_USER /var/www && \
-    chown -R $APP_USER:$APP_USER_HOME
+    chown -R $APP_USER $APP_USER_HOME
 
 WORKDIR $APP_HOME
 
