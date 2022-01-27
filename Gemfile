@@ -28,7 +28,7 @@ gem 'aws-sdk-s3', '~> 1.25'
 # Use Redis adapter to run Action Cable in production
 gem 'hiredis', '~> 0.6.1'
 
-gem 'sidekiq', '~> 5.2'
+gem 'sidekiq', '~> 6.4'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
